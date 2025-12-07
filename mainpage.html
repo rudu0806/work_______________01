@@ -60,8 +60,13 @@
     .brand p{font-size:12px;color:var(--muted);margin:0}
 
     nav ul{list-style:none;display:flex;gap:18px;align-items:center;margin:0;padding:0}
-    nav a{color:inherit;text-decoration:none;font-weight:600;padding:8px;border-radius:8px}
+    nav a{color:inherit;text-decoration:none;font-weight:600;padding:8px 10px;border-radius:8px;transition:background .2s ease}
     nav a:hover{background:rgba(14,163,122,0.06)}
+    
+    /* Mobile nav styles */
+    #mobileNav a{display:block;font-weight:600;padding:10px 8px;transition:background .2s ease}
+    #mobileNav a:hover{background:rgba(14,163,122,0.06)}
+    #mobileNav li{border-bottom:1px solid rgba(15,23,42,0.03)}
 
     .cta{
       background:linear-gradient(90deg,var(--accent),var(--accent-2));
@@ -144,20 +149,134 @@
       .products-grid{grid-template-columns:repeat(2,1fr)}
       .testimonials{grid-template-columns:1fr}
     }
-    @media (max-width:760px){
-      .container{padding:0 16px}
+
+    @media (max-width:768px){
+      .container{padding:0 18px}
+      .nav{padding:12px 0}
       nav ul{display:none}
       .hamb{display:flex}
-      .hero{grid-template-columns:1fr;gap:18px; padding:36px 0}
-      .hero-right{order:2}
-      .features{grid-template-columns:1fr}
-      .products-grid{grid-template-columns:1fr}
+      .hero{grid-template-columns:1fr;gap:24px;padding:40px 0}
+      .hero-left{padding-right:0}
+      .hero-right{padding:16px;order:2}
+      .hero-right img{height:140px}
+      .hero-left h2{font-size:36px;line-height:1.1}
+      .hero-left p{font-size:15px}
       .brand h1{font-size:16px}
+      .features{grid-template-columns:1fr}
+      .products-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+      .card{padding:10px}
+      .card img{height:130px}
+      .testimonials{grid-template-columns:1fr;gap:16px}
+      .contact{flex-direction:column;gap:20px;padding:20px}
+      .contact form{flex:1;width:100%}
+      .contact input,.contact textarea{font-size:16px}
+      #mobileNav{padding:10px 0}
     }
 
-    /* small screen tweaks to hero image (background fallback) */
-    @media (max-width:540px){
-      .hero-left h2{font-size:28px}
+    @media (max-width:640px){
+      .container{padding:0 16px}
+      .nav{gap:8px;padding:10px 0}
+      .logo{width:40px;height:40px;font-size:14px}
+      .brand{gap:8px}
+      .brand h1{font-size:15px}
+      .brand p{font-size:11px}
+      .hero{grid-template-columns:1fr;gap:20px;padding:30px 0}
+      .hero-left h2{font-size:32px}
+      .hero-left p{font-size:14px;line-height:1.4}
+      .actions{gap:10px}
+      .btn{padding:10px 14px;font-size:14px}
+      .eyebrow{font-size:12px;padding:5px 10px}
+      .hero-right{padding:14px}
+      .hero-right img{height:120px;border-radius:10px}
+      .product-grid{grid-template-columns:1fr;gap:14px}
+      .card{padding:8px}
+      .card img{height:110px}
+      .card h4{font-size:15px;margin:8px 0 4px}
+      .card p{font-size:13px}
+      .features{gap:16px}
+      .feature{padding:14px}
+      .feature h3{font-size:16px}
+      .feature p{font-size:14px}
+      .testimonials{gap:14px}
+      .test{padding:14px}
+      .test strong{font-size:15px}
+      .contact{padding:18px;gap:16px}
+      .contact input,.contact textarea{padding:10px;font-size:16px}
+      .btn-primary,.cta{padding:10px 12px;font-size:13px}
+      footer{padding:20px 0;font-size:13px}
+      .floating{padding:10px 12px;font-size:13px;right:12px;bottom:12px}
+      header{padding:0}
+      #mobileNav ul{gap:10px;padding:10px 0}
+      #mobileNav a{font-size:14px;padding:6px}
+    }
+
+    @media (max-width:480px){
+      .container{padding:0 14px}
+      body{font-size:13px}
+      .nav{gap:6px}
+      .logo{width:36px;height:36px;font-size:12px;border-radius:8px}
+      .brand{gap:6px}
+      .brand h1{font-size:14px}
+      .brand p{font-size:10px}
+      .hamb{width:40px;height:40px}
+      .hero{padding:24px 0;gap:18px}
+      .hero-left h2{font-size:28px;line-height:1.05}
+      .hero-left p{font-size:13px}
+      .actions{flex-direction:column}
+      .btn{width:100%;justify-content:center;padding:10px 12px}
+      .btn-primary{width:100%}
+      .eyebrow{font-size:11px;padding:4px 8px;margin-bottom:10px}
+      .hero-right{padding:12px}
+      .hero-right .top{flex-direction:column;align-items:flex-start;gap:8px}
+      .hero-right .top div:last-child{text-align:left;width:100%}
+      .hero-right img{height:100px}
+      .hero-right > div:last-child{display:none}
+      .features{gap:12px;margin:24px 0}
+      .feature{padding:12px;border-radius:10px}
+      .feature h3{font-size:15px;margin-bottom:4px}
+      .feature p{font-size:13px}
+      .collections{margin:12px 0 24px}
+      .collections h3{font-size:16px;margin-bottom:12px}
+      .products-grid{grid-template-columns:1fr;gap:12px}
+      .card{padding:8px;border-radius:10px}
+      .card img{height:140px;border-radius:8px}
+      .card h4{font-size:14px;margin:8px 0 3px}
+      .card p{font-size:12px}
+      .testimonials{gap:12px;margin:24px 0}
+      .test{padding:12px;border-radius:10px}
+      .test strong{font-size:14px}
+      .test p{font-size:13px;line-height:1.4}
+      .test small{font-size:11px}
+      #contact{margin-top:20px}
+      #contact h3{font-size:16px}
+      .contact{padding:14px;gap:14px;border-radius:10px}
+      .contact > div:first-child{order:2;margin-bottom:8px}
+      .contact form{order:1}
+      .contact form > div:first-child{grid-template-columns:1fr;gap:8px}
+      .contact input,.contact textarea{padding:8px 10px;font-size:16px;border-radius:6px}
+      footer{margin-top:20px;margin-bottom:50px;padding:16px 0}
+      footer > div{flex-direction:column;gap:8px;align-items:flex-start}
+      .floating{padding:8px 10px;font-size:12px;right:10px;bottom:14px;border-radius:8px}
+      .modal-card{padding:14px;border-radius:10px}
+      #closeModal{font-size:20px;margin:0}
+    }
+
+    @media (max-width:380px){
+      .container{padding:0 12px}
+      .logo{width:32px;height:32px;font-size:11px}
+      .brand h1{font-size:13px}
+      .hero-left h2{font-size:24px}
+      .hero-left p{font-size:12px}
+      .actions{gap:6px}
+      .btn{padding:8px 10px;font-size:12px}
+      .eyebrow{font-size:10px;padding:3px 6px}
+      .feature h3{font-size:14px}
+      .feature p{font-size:12px}
+      .card h4{font-size:13px}
+      .card p{font-size:11px}
+      .test strong{font-size:13px}
+      .test p{font-size:12px}
+      .floating{padding:6px 8px;font-size:11px}
     }
 
   </style>
