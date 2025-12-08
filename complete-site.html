@@ -1340,29 +1340,124 @@
             }
 
             /* HEADER RESPONSIVENESS */
+            header {
+                padding: 0.75rem 0;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+                backdrop-filter: blur(12px);
+            }
+
+            nav.main-nav {
+                padding: 0.75rem 4%;
+                height: 60px;
+                gap: 1rem;
+            }
+
             header nav ul {
                 display: none;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+                gap: 0;
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+
+            .nav-tabs button {
+                padding: 0.7rem 1rem;
+                font-size: 0.85rem;
+                border-bottom: 2px solid transparent;
+                border-radius: 0;
+                width: 100%;
+                text-align: left;
+                transition: all 0.3s ease;
+            }
+
+            .nav-tabs button:hover {
+                background: rgba(45, 80, 22, 0.08);
+                border-bottom-color: var(--primary-green);
+            }
+
+            .nav-tabs button.active {
+                background: rgba(45, 80, 22, 0.12);
+                border-bottom-color: var(--primary-green);
+                border-radius: 0;
             }
 
             .hamb {
                 display: flex;
                 width: 48px;
                 height: 48px;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                position: relative;
+                padding: 0;
+                margin-left: auto;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hamb::before,
+            .hamb::after {
+                content: '';
+                position: absolute;
+                width: 24px;
+                height: 2px;
+                background: var(--primary-green);
+                transition: all 0.3s ease;
+            }
+
+            .hamb::before {
+                top: 14px;
+            }
+
+            .hamb::after {
+                bottom: 14px;
+                box-shadow: 0 8px 0 var(--primary-green);
+            }
+
+            .hamb.active::before {
+                transform: rotate(45deg);
+                top: 22px;
+            }
+
+            .hamb.active::after {
+                transform: rotate(-45deg);
+                bottom: 22px;
+                box-shadow: none;
             }
 
             .brand-logo {
-                width: 52px;
-                height: 52px;
-                font-size: 24px;
+                width: 48px;
+                height: 48px;
+                font-size: 22px;
+                flex-shrink: 0;
+            }
+
+            .brand {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                flex: 1;
+                min-width: 0;
             }
 
             .brand h1 {
-                font-size: 18px;
+                font-size: 16px;
                 margin: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             .brand p {
-                font-size: 11px;
+                font-size: 10px;
+                margin: 0;
+                display: none;
             }
 
             /* HERO SECTION */
@@ -1681,25 +1776,105 @@
                 padding: 0 12px;
             }
 
-            /* HEADER */
+            /* HEADER - ENHANCED MOBILE */
+            header {
+                padding: 0.6rem 0;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            nav.main-nav {
+                padding: 0.6rem 3%;
+                height: 56px;
+                gap: 0.75rem;
+            }
+
+            .brand {
+                gap: 8px;
+                flex: 1;
+            }
+
             .brand-logo {
-                width: 44px;
-                height: 44px;
-                font-size: 20px;
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+                flex-shrink: 0;
             }
 
             .brand h1 {
-                font-size: 16px;
+                font-size: 14px;
+                font-weight: 700;
             }
 
             .brand p {
-                font-size: 10px;
-                letter-spacing: 1px;
+                font-size: 9px;
+                letter-spacing: 0.5px;
+                display: none;
             }
 
             .hamb {
                 width: 40px;
                 height: 40px;
+                flex-shrink: 0;
+            }
+
+            .hamb::before,
+            .hamb::after {
+                width: 20px;
+                height: 2px;
+            }
+
+            .hamb::before {
+                top: 12px;
+            }
+
+            .hamb::after {
+                bottom: 12px;
+                box-shadow: 0 6px 0 var(--primary-green);
+            }
+
+            .nav-tabs {
+                position: fixed;
+                top: 56px;
+                left: 0;
+                right: 0;
+                background: white;
+                border-bottom: 2px solid var(--border-light);
+                flex-direction: column;
+                gap: 0;
+                margin-bottom: 0;
+                max-height: calc(100vh - 56px);
+                overflow-y: auto;
+                display: none;
+                z-index: 999;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
+
+            .nav-tabs.active {
+                display: flex;
+            }
+
+            .nav-tabs button {
+                padding: 0.75rem 1rem;
+                font-size: 0.8rem;
+                border: none;
+                border-bottom: 1px solid var(--border-light);
+                border-radius: 0;
+                width: 100%;
+                text-align: left;
+                background: white;
+                color: var(--text-dark);
+            }
+
+            .nav-tabs button:hover {
+                background: rgba(45, 80, 22, 0.06);
+                border-bottom-color: var(--primary-green);
+            }
+
+            .nav-tabs button.active {
+                background: rgba(45, 80, 22, 0.1);
+                border-bottom-color: var(--primary-green);
+                color: var(--primary-green);
+                font-weight: 700;
             }
 
             /* HERO */
@@ -2071,14 +2246,66 @@
                 padding: 0 10px;
             }
 
+            /* HEADER - ULTRA MOBILE */
+            header {
+                padding: 0.5rem 0;
+            }
+
+            nav.main-nav {
+                padding: 0.5rem 2%;
+                height: 50px;
+                gap: 0.5rem;
+            }
+
+            .brand {
+                gap: 6px;
+            }
+
             .brand-logo {
-                width: 36px;
-                height: 36px;
-                font-size: 14px;
+                width: 34px;
+                height: 34px;
+                font-size: 13px;
+                flex-shrink: 0;
             }
 
             .brand h1 {
-                font-size: 14px;
+                font-size: 12px;
+                font-weight: 700;
+            }
+
+            .brand p {
+                display: none;
+            }
+
+            .hamb {
+                width: 36px;
+                height: 36px;
+                flex-shrink: 0;
+            }
+
+            .hamb::before,
+            .hamb::after {
+                width: 18px;
+                height: 1.5px;
+            }
+
+            .hamb::before {
+                top: 10px;
+            }
+
+            .hamb::after {
+                bottom: 10px;
+                box-shadow: 0 5px 0 var(--primary-green);
+            }
+
+            .nav-tabs {
+                top: 50px;
+            }
+
+            .nav-tabs button {
+                padding: 0.6rem 0.8rem;
+                font-size: 0.75rem;
+                letter-spacing: 0;
             }
 
             nav {
@@ -2390,6 +2617,89 @@
             /* Improved testimonials */
             .testimonials {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        /* LANDSCAPE MODE - Mobile devices in landscape */
+        @media (max-height: 500px) and (orientation: landscape) {
+            header {
+                padding: 0.4rem 0;
+                position: sticky;
+                top: 0;
+            }
+
+            nav.main-nav {
+                height: 48px;
+                padding: 0.4rem 3%;
+                gap: 0.5rem;
+            }
+
+            .brand-logo {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+            }
+
+            .brand h1 {
+                font-size: 13px;
+            }
+
+            .brand p {
+                display: none;
+            }
+
+            .hamb {
+                width: 36px;
+                height: 36px;
+            }
+
+            .nav-tabs {
+                top: 48px;
+            }
+
+            .nav-tabs button {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.75rem;
+            }
+
+            .hero {
+                padding: 16px 0;
+                gap: 12px;
+                min-height: auto;
+            }
+
+            .hero-left h2 {
+                font-size: 20px;
+                margin-bottom: 8px;
+            }
+
+            .hero-left p {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+
+            .hero-right {
+                padding: 10px;
+            }
+
+            .hero-right img {
+                height: 80px;
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                margin: 12px 0;
+            }
+
+            .feature {
+                padding: 10px;
+            }
+
+            .floating {
+                padding: 6px 8px;
+                font-size: 10px;
+                bottom: 8px;
             }
         }
 
