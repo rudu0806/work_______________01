@@ -861,35 +861,6 @@
             border-radius: 14px;
             padding: 18px;
             box-shadow: 0 40px 120px rgba(2,6,23,0.5);
-            max-height: calc(100vh - 80px);
-            overflow: auto;
-        }
-
-        /* Responsive grid used inside product modal */
-        .modal-grid {
-            display: grid;
-            grid-template-columns: 1fr 360px;
-            gap: 20px;
-            align-items: start;
-            /* center the order summary column horizontally */
-        }
-
-        .modal-grid .order-summary {
-            justify-self: center;
-        }
-
-        /* Make the modal content stack on smaller screens */
-        @media (max-width: 720px) {
-            .modal-card { padding: 14px; width: 96%; }
-            .modal-grid {
-                grid-template-columns: 1fr;
-                gap: 12px;
-            }
-            .modal-grid .order-summary { max-width: none; width: 100%; }
-            /* Ensure images in summary are slightly smaller on phones */
-            .modal-grid .order-summary img { width: 56px; height: 56px; }
-            /* center content inside the summary on narrow viewports */
-            .modal-grid .order-summary { justify-self: center; text-align: center; }
         }
 
         /* FLOATING CTA */
@@ -3286,25 +3257,6 @@
 
     <!-- PAGE 2: SHOP -->
     <div id="shop" class="page-section">
-        <header style="background: linear-gradient(135deg, rgba(45,80,22,0.02) 0%, rgba(90,138,58,0.02) 100%); border-bottom: 2px solid rgba(212,175,55,0.15); padding: 1rem 0;">
-            <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
-                <a class="brand" href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; flex: 0 0 auto;">
-                    <div class="brand-logo" style="width: 52px; height: 52px;">BNK</div>
-                    <div>
-                        <h1 style="font-size: 20px; margin: 0; color: var(--primary-green);">BNK Wellness</h1>
-                        <p class="small muted" style="margin: 2px 0 0;">Shop Products</p>
-                    </div>
-                </a>
-                <nav style="flex: 1; display: flex; justify-content: center;">
-                    <ul id="navlinks-shop" style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; align-items: center;">
-                        <li><a href="javascript:void(0)" onclick="switchPage('home')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block;">Home</a></li>
-                        <li><a href="javascript:void(0)" onclick="switchPage('checkout')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block;">Checkout</a></li>
-                    </ul>
-                </nav>
-                <a href="javascript:void(0)" onclick="switchPage('checkout')" style="background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: white; padding: 12px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; box-shadow: 0 10px 30px rgba(43,122,11,0.12); white-space: nowrap; flex: 0 0 auto;">Cart</a>
-            </div>
-        </header>
-
         <main class="container" style="padding: 40px 0;">
             <h2 style="margin-bottom: 30px; font-size: 2rem; font-family: 'Cormorant Garamond', serif; color: var(--primary-green);">Our Products</h2>
             
@@ -3619,7 +3571,7 @@
                 const currentBody = currentModal === modal ? modalBody : modalBodyShop;
                 
                 currentBody.innerHTML = `
-                    <div class="modal-grid">
+                    <div style="display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start">
                         <div>
                             <h2 style="margin-top:0">${info.title || 'Product'}</h2>
                             <p class="muted">${info.desc || ''}</p>
