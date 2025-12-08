@@ -279,6 +279,175 @@
       .floating{padding:6px 8px;font-size:11px}
     }
 
+    /* ULTRA MOBILE - Extra small devices (320px) */
+    @media (max-width:360px) {
+      .container{padding:0 10px}
+      .logo{width:30px;height:30px;font-size:10px}
+      .brand h1{font-size:12px}
+      .brand p{font-size:9px}
+      nav ul{gap:10px}
+      nav a{padding:6px 8px;font-size:12px}
+      .hero-left h2{font-size:22px;line-height:1.05}
+      .hero-left p{font-size:11px}
+      .btn{padding:8px 10px;font-size:11px;min-height:40px}
+      .eyebrow{font-size:9px;padding:3px 6px}
+      .hero-right img{height:90px}
+      .feature{padding:10px}
+      .feature h3{font-size:13px}
+      .feature p{font-size:11px}
+      .card{padding:6px}
+      .card img{height:100px}
+      .card h4{font-size:12px;margin:6px 0 2px}
+      .card p{font-size:10px}
+      .test{padding:10px}
+      .test strong{font-size:12px}
+      .test p{font-size:11px}
+      .floating{padding:6px 8px;font-size:10px;min-height:36px}
+    }
+
+    /* TOUCH DEVICES - Better tap targets */
+    @media (hover:none) and (pointer:coarse) {
+      button,
+      .btn,
+      a,
+      nav a {
+        min-height:48px;
+        min-width:48px;
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+      }
+      
+      .card,
+      .test,
+      .feature {
+        cursor:pointer;
+      }
+      
+      input,
+      textarea,
+      select {
+        font-size:16px !important;
+        padding:12px !important;
+      }
+    }
+
+    /* LANDSCAPE MODE - Devices in landscape */
+    @media (max-height:500px) and (orientation:landscape) {
+      .hero{min-height:auto;padding:20px 0;gap:20px}
+      .hero-left h2{font-size:28px;margin-bottom:8px}
+      .hero-left p{font-size:13px;margin-bottom:10px}
+      .hero-right{padding:12px}
+      .hero-right img{height:100px}
+      .features{grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+      .floating{padding:8px 10px;font-size:11px}
+    }
+
+    /* TABLETS - Medium devices (769px-1024px) */
+    @media (min-width:769px) and (max-width:1024px) {
+      .container{padding:0 18px}
+      .hero{grid-template-columns:1fr 360px;gap:30px;padding:40px 0}
+      .hero-left h2{font-size:38px}
+      .features{grid-template-columns:repeat(2,1fr);gap:18px}
+      .products-grid{grid-template-columns:repeat(2,1fr)}
+      .testimonials{grid-template-columns:repeat(2,1fr)}
+    }
+
+    /* IMPROVED TEXT READABILITY */
+    @media (max-width:600px) {
+      html{font-size:14px}
+      body{font-size:14px}
+      h1{font-size:20px}
+      h2{font-size:24px}
+      h3{font-size:18px}
+      p{font-size:14px;line-height:1.6}
+    }
+
+    /* PREVENT TEXT CUTOFF & IMPROVE SPACING */
+    @media (max-width:640px) {
+      body{padding-bottom:60px}
+      section{padding:1.5rem 0}
+      .container{max-width:100%;margin:0 auto}
+      
+      /* Better input sizing */
+      input,
+      textarea,
+      select {
+        font-size:16px;
+        padding:10px;
+        width:100%;
+      }
+
+      /* Ensure buttons are tappable */
+      .btn,
+      button {
+        min-height:44px;
+        min-width:100px;
+      }
+
+      /* Better form spacing */
+      .contact > div:first-child {
+        margin-top:10px;
+      }
+
+      /* Improve card interactions */
+      .card {
+        transition:transform 0.2s ease,box-shadow 0.2s ease;
+      }
+
+      .card:active {
+        transform:scale(0.98);
+      }
+
+      /* Better footer spacing */
+      footer {
+        margin-bottom:70px;
+      }
+
+      /* Prevent double tap zoom */
+      button,a,input,select,textarea {
+        touch-action:manipulation;
+      }
+    }
+
+    /* SAFE AREA INSETS - For notched devices */
+    @supports (padding: max(0px)) {
+      body {
+        padding-left:max(0px,env(safe-area-inset-left));
+        padding-right:max(0px,env(safe-area-inset-right));
+      }
+      
+      .container {
+        padding-left:max(16px,env(safe-area-inset-left));
+        padding-right:max(16px,env(safe-area-inset-right));
+      }
+      
+      .floating {
+        right:max(10px,env(safe-area-inset-right));
+        bottom:max(14px,env(safe-area-inset-bottom));
+      }
+    }
+
+    /* PRINT STYLES */
+    @media print {
+      nav,
+      .hamb,
+      .floating,
+      header button {
+        display:none;
+      }
+      
+      body {
+        padding:0;
+        background:white;
+      }
+      
+      .container {
+        max-width:100%;
+        padding:0;
+      }
+    }
+
   </style>
 </head>
 <body>
