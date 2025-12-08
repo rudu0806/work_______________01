@@ -861,6 +861,36 @@
             border-radius: 14px;
             padding: 18px;
             box-shadow: 0 40px 120px rgba(2,6,23,0.5);
+            max-height: calc(100vh - 80px);
+            overflow: auto;
+        }
+
+        /* Responsive grid used inside product modal */
+        .modal-grid {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            gap: 20px;
+            align-items: start;
+            /* center the order summary column horizontally */
+        }
+
+        .modal-grid .order-summary {
+            justify-self: center;
+        }
+        }
+
+        /* Make the modal content stack on smaller screens */
+        @media (max-width: 720px) {
+            .modal-card { padding: 14px; width: 96%; }
+            .modal-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .modal-grid .order-summary { max-width: none; width: 100%; }
+            /* Ensure images in summary are slightly smaller on phones */
+            .modal-grid .order-summary img { width: 56px; height: 56px; }
+            /* center content inside the summary on narrow viewports */
+            .modal-grid .order-summary { justify-self: center; text-align: center; }
         }
 
         /* FLOATING CTA */
@@ -2556,7 +2586,7 @@
                 const currentBody = currentModal === modal ? modalBody : modalBodyShop;
                 
                 currentBody.innerHTML = `
-                    <div style="display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start">
+                    <div class="modal-grid">
                         <div>
                             <h2 style="margin-top:0">${info.title || 'Product'}</h2>
                             <p class="muted">${info.desc || ''}</p>
