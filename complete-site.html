@@ -121,18 +121,6 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        .header-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
 /* HEADER STYLES - ULTRA PREMIUM DESIGN */
         @keyframes headerFloat {
             0%, 100% { transform: translateY(0); }
@@ -1323,178 +1311,29 @@
             }
 
             /* HEADER RESPONSIVENESS */
-            header {
-                padding: 0.75rem 0;
-                position: sticky;
-                top: 0;
-                z-index: 1000;
-                box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-                backdrop-filter: blur(12px);
-            }
-
-            nav.main-nav {
-                padding: 0.75rem 4%;
-                height: 60px;
-                gap: 1rem;
-            }
-
             header nav ul {
                 display: none;
-            }
-
-            .nav-tabs {
-                flex-direction: column;
-                gap: 0;
-                border-bottom: none;
-                margin-bottom: 0;
-            }
-
-            .nav-tabs button {
-                padding: 0.7rem 1rem;
-                font-size: 0.85rem;
-                border-bottom: 2px solid transparent;
-                border-radius: 0;
-                width: 100%;
-                text-align: left;
-                transition: all 0.3s ease;
-            }
-
-            .nav-tabs button:hover {
-                background: rgba(45, 80, 22, 0.08);
-                border-bottom-color: var(--primary-green);
-            }
-
-            .nav-tabs button.active {
-                background: rgba(45, 80, 22, 0.12);
-                border-bottom-color: var(--primary-green);
-                border-radius: 0;
             }
 
             .hamb {
                 display: flex;
                 width: 48px;
                 height: 48px;
-                background: transparent;
-                border: none;
-                cursor: pointer;
-                position: relative;
-                padding: 0;
-                margin-left: auto;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .hamb::before,
-            .hamb::after {
-                content: '';
-                position: absolute;
-                width: 24px;
-                height: 2px;
-                background: var(--primary-green);
-                transition: all 0.3s ease;
-            }
-
-            .hamb::before {
-                top: 14px;
-            }
-
-            .hamb::after {
-                bottom: 14px;
-                box-shadow: 0 8px 0 var(--primary-green);
-            }
-
-            .hamb.active::before {
-                transform: rotate(45deg);
-                top: 22px;
-            }
-
-            .hamb.active::after {
-                transform: rotate(-45deg);
-                bottom: 22px;
-                box-shadow: none;
             }
 
             .brand-logo {
-                width: 48px;
-                height: 48px;
-                font-size: 22px;
-                flex-shrink: 0;
-            }
-
-            .brand {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                flex: 1;
-                min-width: 0;
+                width: 52px;
+                height: 52px;
+                font-size: 24px;
             }
 
             .brand h1 {
-                font-size: 16px;
+                font-size: 18px;
                 margin: 0;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
             }
 
             .brand p {
-                font-size: 10px;
-                margin: 0;
-                display: none;
-            }
-
-            /* HEADER CONTAINER CENTERING */
-            .header-container {
-                padding: 0 16px;
-                gap: 1rem;
-                justify-content: center;
-                text-align: center;
-            }
-
-            .brand {
-                flex: 1 1 100%;
-                justify-content: center;
-                margin-bottom: 0.5rem;
-            }
-
-            nav {
-                flex: 1 1 100%;
-                justify-content: center;
-            }
-
-            /* HEADER CONTAINER MOBILE */
-            .header-container {
-                padding: 0 12px;
-                gap: 0.75rem;
-                flex-wrap: nowrap;
-            }
-
-            .brand {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                flex: 0 1 auto;
-                min-width: 0;
-            }
-
-            .brand h1 {
-                font-size: 15px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            .brand p {
-                font-size: 9px;
-                display: none;
-            }
-
-            nav {
-                display: none !important;
-            }
-
-            .cta-btn {
-                display: none !important;
+                font-size: 11px;
             }
 
             /* HERO SECTION */
@@ -1813,153 +1652,25 @@
                 padding: 0 12px;
             }
 
-            /* HEADER - ENHANCED MOBILE */
-            header {
-                padding: 0.6rem 0;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            }
-
-            nav.main-nav {
-                padding: 0.6rem 3%;
-                height: 56px;
-                gap: 0.75rem;
-            }
-
-            .brand {
-                gap: 8px;
-                flex: 1;
-            }
-
+            /* HEADER */
             .brand-logo {
-                width: 40px;
-                height: 40px;
-                font-size: 18px;
-                flex-shrink: 0;
+                width: 44px;
+                height: 44px;
+                font-size: 20px;
             }
 
             .brand h1 {
-                font-size: 14px;
-                font-weight: 700;
+                font-size: 16px;
             }
 
             .brand p {
-                font-size: 9px;
-                letter-spacing: 0.5px;
-                display: none;
-            }
+                font-size: 10px;
+                letter-spacing: 1px;
+            }genic herb fo
 
             .hamb {
                 width: 40px;
                 height: 40px;
-                flex-shrink: 0;
-            }
-
-            .hamb::before,
-            .hamb::after {
-                width: 20px;
-                height: 2px;
-            }
-
-            .hamb::before {
-                top: 12px;
-            }
-
-            .hamb::after {
-                bottom: 12px;
-                box-shadow: 0 6px 0 var(--primary-green);
-            }
-
-            .nav-tabs {
-                position: fixed;
-                top: 56px;
-                left: 0;
-                right: 0;
-                background: white;
-                border-bottom: 2px solid var(--border-light);
-                flex-direction: column;
-                gap: 0;
-                margin-bottom: 0;
-                max-height: calc(100vh - 56px);
-                overflow-y: auto;
-                display: none;
-                z-index: 999;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            }
-
-            .nav-tabs.active {
-                display: flex;
-            }
-
-            .nav-tabs button {
-                padding: 0.75rem 1rem;
-                font-size: 0.8rem;
-                border: none;
-                border-bottom: 1px solid var(--border-light);
-                border-radius: 0;
-                width: 100%;
-                text-align: left;
-                background: white;
-                color: var(--text-dark);
-            }
-
-            .nav-tabs button:hover {
-                background: rgba(45, 80, 22, 0.06);
-                border-bottom-color: var(--primary-green);
-            }
-
-            .nav-tabs button.active {
-                background: rgba(45, 80, 22, 0.1);
-                border-bottom-color: var(--primary-green);
-                color: var(--primary-green);
-                font-weight: 700;
-            }
-
-            /* HEADER CONTAINER CENTERING - 480px */
-            .header-container {
-                padding: 0 10px;
-                gap: 0.5rem;
-                flex-wrap: nowrap;
-                justify-content: space-between;
-            }
-
-            .brand {
-                flex: 1;
-                gap: 8px;
-                min-width: 0;
-            }
-
-            .brand-logo {
-                width: 40px;
-                height: 40px;
-                font-size: 18px;
-                flex-shrink: 0;
-            }
-
-            .brand h1 {
-                font-size: 13px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            .brand p {
-                display: none;
-            }
-
-            .hamb {
-                width: 40px;
-                height: 40px;
-                flex-shrink: 0;
-            }
-
-            .cta-btn {
-                padding: 8px 12px;
-                font-size: 12px;
-                display: flex !important;
-            }
-
-            nav {
-                display: none !important;
             }
 
             /* HERO */
@@ -2320,656 +2031,33 @@
                 line-height: 1.5;
             }
         }
-
-        /* ULTRA MOBILE - Extra small devices */
-        @media (max-width: 360px) {
-            :root {
-                --main-nav-height: 50px;
-            }
-
-            .container {
-                padding: 0 10px;
-            }
-
-            /* HEADER - ULTRA MOBILE */
-            header {
-                padding: 0.5rem 0;
-            }
-
-            nav.main-nav {
-                padding: 0.5rem 2%;
-                height: 50px;
-                gap: 0.5rem;
-            }
-
-            .brand {
-                gap: 6px;
-            }
-
-            .brand-logo {
-                width: 34px;
-                height: 34px;
-                font-size: 13px;
-                flex-shrink: 0;
-            }
-
-            .brand h1 {
-                font-size: 12px;
-                font-weight: 700;
-            }
-
-            .brand p {
-                display: none;
-            }
-
-            .hamb {
-                width: 36px;
-                height: 36px;
-                flex-shrink: 0;
-            }
-
-            .hamb::before,
-            .hamb::after {
-                width: 18px;
-                height: 1.5px;
-            }
-
-            .hamb::before {
-                top: 10px;
-            }
-
-            .hamb::after {
-                bottom: 10px;
-                box-shadow: 0 5px 0 var(--primary-green);
-            }
-
-            .nav-tabs {
-                top: 50px;
-            }
-
-            .nav-tabs button {
-                padding: 0.6rem 0.8rem;
-                font-size: 0.75rem;
-                letter-spacing: 0;
-            }
-
-            /* HEADER CONTAINER CENTERING - 360px */
-            .header-container {
-                padding: 0 10px;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 0.6rem;
-                text-align: center;
-            }
-
-            .brand {
-                flex: 1 1 100%;
-                justify-content: center;
-                min-width: 0;
-            }
-
-            .brand h1 {
-                font-size: 12px;
-                white-space: normal;
-            }
-
-            nav {
-                font-size: 13px !important;
-            }
-
-            nav a {
-                padding: 6px 8px !important;
-                font-size: 12px !important;
-            }
-
-            .hero-left h2 {
-                font-size: 20px;
-            }
-
-            .hero-left p {
-                font-size: 12px;
-            }
-
-            .btn {
-                padding: 8px 12px;
-                font-size: 11px;
-            }
-
-            .card h4 {
-                font-size: 12px;
-            }
-
-            .floating {
-                right: 8px;
-                bottom: 8px;
-                padding: 6px 8px;
-                font-size: 10px;
-            }
-
-            .checkout-section {
-                padding: 1rem;
-            }
-
-            .form-group {
-                margin-bottom: 0.6rem;
-            }
-
-            .form-group input,
-            .form-group select {
-                padding: 0.6rem;
-                font-size: 14px;
-            }
-
-            .section-title {
-                font-size: 1.1rem;
-            }
-        }
-
-        /* TABLET - Medium devices (768px to 1024px) */
-        @media (max-width: 1024px) and (min-width: 769px) {
-            .container {
-                padding: 0 20px;
-            }
-
-            .hero {
-                grid-template-columns: 1fr;
-            }
-
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .checkout-container {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .order-summary {
-                border-top: 2px solid var(--border-light);
-                padding-top: 1.5rem;
-            }
-        }
-
-        /* MOBILE FIRST - Small to Medium devices (480px to 768px) */
-        @media (max-width: 768px) and (min-width: 481px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            .hero {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .hero-left h2 {
-                font-size: 28px;
-            }
-
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-            }
-
-            .card {
-                padding: 10px;
-            }
-
-            .checkout-container {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-                padding: 1.5rem;
-            }
-
-            .payment-methods {
-                flex-direction: column;
-            }
-
-            .payment-method {
-                flex-direction: row;
-                align-items: center;
-                gap: 1rem;
-                padding: 1rem;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            nav ul {
-                gap: 1rem !important;
-            }
-
-            nav a {
-                padding: 8px 10px !important;
-                font-size: 13px !important;
-            }
-        }
-
-        /* LARGE MOBILE - 320px to 480px */
-        @media (max-width: 480px) and (min-width: 321px) {
-            .hero-left h2 {
-                font-size: 24px;
-            }
-
-            .products-grid {
-                grid-template-columns: 1fr;
-                gap: 12px;
-            }
-
-            .card {
-                padding: 10px;
-            }
-
-            .checkout-container {
-                padding: 1rem;
-            }
-        }
-
-        /* LANDSCAPE MODE - Devices in landscape orientation */
-        @media (max-height: 500px) and (orientation: landscape) {
-            /* HEADER CONTAINER CENTERING - LANDSCAPE */
-            .header-container {
-                padding: 0 12px;
-                gap: 1rem;
-                flex-wrap: nowrap;
-            }
-
-            .brand {
-                flex: 0 1 auto;
-                justify-content: flex-start;
-                gap: 10px;
-            }
-
-            nav {
-                flex: 1;
-                justify-content: center;
-            }
-
-            .hero {
-                padding: 10px 0;
-                gap: 10px;
-            }
-
-            .hero-left h2 {
-                font-size: 20px;
-                margin-bottom: 5px;
-            }
-
-            .hero-left p {
-                font-size: 12px;
-                margin-bottom: 10px;
-            }
-
-            .hero-right {
-                padding: 10px;
-            }
-
-            .hero-right img {
-                height: 100px;
-            }
-
-            .features {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 8px;
-                margin: 10px 0;
-            }
-
-            .feature {
-                padding: 8px;
-            }
-
-            .floating {
-                padding: 6px 8px;
-                font-size: 10px;
-            }
-        }
-
-        /* TOUCH DEVICES - Better tap targets */
-        @media (hover: none) and (pointer: coarse) {
-            button,
-            .btn,
-            a {
-                min-height: 44px;
-                min-width: 44px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .nav-tabs button {
-                padding: 0.8rem 1.2rem;
-                min-height: 48px;
-            }
-
-            .card {
-                cursor: pointer;
-            }
-
-            .payment-method {
-                cursor: pointer;
-            }
-        }
-
-        /* FLEXIBLE TEXT - Prevent text from being too small */
-        @media (max-width: 600px) {
-            html {
-                font-size: 14px;
-            }
-
-            body {
-                font-size: 14px;
-            }
-
-            h1 {
-                font-size: 22px;
-            }
-
-            h2 {
-                font-size: 18px;
-            }
-
-            h3 {
-                font-size: 16px;
-            }
-        }
-
-        /* IMPROVED SCROLL & SPACING */
-        @media (max-width: 640px) {
-            body {
-                padding-top: 50px;
-            }
-
-            .container {
-                margin: 0 auto;
-            }
-
-            section {
-                padding: 1.5rem 0;
-            }
-
-            /* Improved spacing for touch */
-            .btn, 
-            button,
-            input,
-            select,
-            textarea {
-                font-size: 16px;
-            }
-
-            /* Prevent zoom on input focus */
-            input,
-            select,
-            textarea {
-                font-size: 16px !important;
-            }
-
-            /* Better spacing between form elements */
-            .form-group {
-                margin-bottom: 1.2rem;
-            }
-
-            /* Stacked layout for checkout */
-            .form-row {
-                gap: 1rem;
-            }
-
-            /* Full width buttons on mobile */
-            .btn-primary,
-            .btn-secondary,
-            .btn-primary-checkout {
-                width: 100%;
-            }
-
-            /* Better card layout on mobile */
-            .card {
-                border-radius: 8px;
-            }
-
-            /* Improved modal size */
-            .modal-card {
-                width: 95vw;
-                max-height: 90vh;
-                overflow-y: auto;
-            }
-
-            /* Better feature display */
-            .features {
-                grid-template-columns: 1fr;
-            }
-
-            /* Improved testimonials */
-            .testimonials {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* LANDSCAPE MODE - Mobile devices in landscape */
-        @media (max-height: 500px) and (orientation: landscape) {
-            header {
-                padding: 0.4rem 0;
-                position: sticky;
-                top: 0;
-            }
-
-            nav.main-nav {
-                height: 48px;
-                padding: 0.4rem 3%;
-                gap: 0.5rem;
-            }
-
-            .brand-logo {
-                width: 36px;
-                height: 36px;
-                font-size: 16px;
-            }
-
-            .brand h1 {
-                font-size: 13px;
-            }
-
-            .brand p {
-                display: none;
-            }
-
-            .hamb {
-                width: 36px;
-                height: 36px;
-            }
-
-            .nav-tabs {
-                top: 48px;
-            }
-
-            .nav-tabs button {
-                padding: 0.5rem 0.8rem;
-                font-size: 0.75rem;
-            }
-
-            .hero {
-                padding: 16px 0;
-                gap: 12px;
-                min-height: auto;
-            }
-
-            .hero-left h2 {
-                font-size: 20px;
-                margin-bottom: 8px;
-            }
-
-            .hero-left p {
-                font-size: 12px;
-                margin-bottom: 10px;
-            }
-
-            .hero-right {
-                padding: 10px;
-            }
-
-            .hero-right img {
-                height: 80px;
-            }
-
-            .features {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-                margin: 12px 0;
-            }
-
-            .feature {
-                padding: 10px;
-            }
-
-            .floating {
-                padding: 6px 8px;
-                font-size: 10px;
-                bottom: 8px;
-            }
-        }
-
-        /* PRINT STYLES */
-        @media print {
-            nav,
-            .floating,
-            header button,
-            .modal,
-            .success-modal {
-                display: none;
-            }
-
-            body {
-                padding: 0;
-                background: white;
-            }
-
-            .page-section {
-                padding: 0;
-                margin: 0;
-            }
-        }
-
-        /* MOBILE RESPONSIVE - ULTRA MOBILE 320px-360px */
-        @media (max-width: 360px) {
-            html { font-size: 13px; }
-            h1 { font-size: 18px; line-height: 1.2; }
-            h2 { font-size: 16px; }
-            .container { padding: 0 10px; }
-            header { padding: 0.75rem 0; }
-            nav ul { gap: 0.75rem; }
-            .btn { padding: 10px 12px; font-size: 12px; }
-            .card img { height: 120px; }
-            section { padding: 1rem 0; }
-        }
-
-        /* MOBILE RESPONSIVE - SMALL MOBILE 361px-480px */
-        @media (min-width: 361px) and (max-width: 480px) {
-            .container { padding: 0 12px; }
-            .products-grid, .testimonials, .features { grid-template-columns: 1fr; gap: 12px; }
-            .card { padding: 12px; }
-            .card img { height: 140px; }
-            .test, .feature { padding: 14px; margin-bottom: 12px; }
-        }
-
-        /* MOBILE RESPONSIVE - MEDIUM MOBILE 481px-640px */
-        @media (min-width: 481px) and (max-width: 640px) {
-            .container { padding: 0 16px; }
-            .products-grid, .testimonials { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-            .features { grid-template-columns: 1fr; }
-            .card { padding: 14px; }
-            .card img { height: 160px; }
-            .payment-methods { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        }
-
-        /* MOBILE RESPONSIVE - MOBILE 641px-768px */
-        @media (min-width: 641px) and (max-width: 768px) {
-            .products-grid, .testimonials { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-            .features { grid-template-columns: repeat(2, 1fr); }
-            .payment-methods { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-            .form-row { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-        }
-
-        /* LANDSCAPE MODE - max-height 500px */
-        @media (max-height: 500px) and (orientation: landscape) {
-            header { padding: 0.5rem 0; }
-            main.container { padding: 1rem 0; }
-            section { padding: 0.75rem 0; }
-            .floating { bottom: 10px; right: 10px; }
-        }
-
-        /* SAFE AREA INSETS - NOTCHED DEVICES */
-        @supports (padding: max(0px)) {
-            body {
-                padding-left: max(0px, env(safe-area-inset-left));
-                padding-right: max(0px, env(safe-area-inset-right));
-            }
-            .container {
-                padding-left: max(12px, env(safe-area-inset-left));
-                padding-right: max(12px, env(safe-area-inset-right));
-            }
-            .floating {
-                right: max(10px, env(safe-area-inset-right));
-                bottom: max(10px, env(safe-area-inset-bottom));
-            }
-        }
-
-        /* TOUCH DEVICE OPTIMIZATION */
-        @media (hover: none) and (pointer: coarse) {
-            button, .btn, a, input, select, textarea, .card, .test, .feature {
-                min-height: 44px;
-                min-width: 44px;
-            }
-            button { padding: 12px 16px; }
-            .card, .test, .feature { cursor: pointer; -webkit-tap-highlight-color: rgba(0,0,0,0.1); }
-        }
-
-        /* PREVENT INPUT ZOOM ON iOS */
-        @media (max-width: 1024px) {
-            input, textarea, select, button { font-size: 16px !important; }
-        }
-
-        /* FLOATING BUTTON MOBILE */
-        @media (max-width: 768px) {
-            .floating { padding: 10px 12px; font-size: 12px; right: 12px; bottom: 70px; z-index: 99; }
-        }
-
-        /* MODAL RESPONSIVE */
-        @media (max-width: 480px) {
-            .modal-card { width: 95vw; max-width: 100%; padding: 16px; border-radius: 12px; }
-            #closeModal { font-size: 24px; }
-        }
-
-        /* PRINT STYLES */
-        @media print {
-            .hamb, .floating, #mobileNav { display: none !important; }
-            body { background: white; }
-        }
     </style>
 </head>
 <body>
    
     <!-- PAGE 1: HOME -->
     <div id="home" class="page-section active">
-        <header style="background: linear-gradient(135deg, rgba(45,80,22,0.02) 0%, rgba(90,138,58,0.02) 100%); border-bottom: 2px solid rgba(212,175,55,0.15); padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000;">
-            <div class="container header-container" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: nowrap; width: 100%;">
-                <a class="brand" href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; flex: 0 0 auto; min-width: 0; white-space: nowrap;">
-                    <div class="brand-logo" style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">BNK</div>
-                    <div style="min-width: 0; display: flex; flex-direction: column; justify-content: center;">
-                        <h1 style="font-size: 18px; margin: 0; color: var(--primary-green); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.1;">BNK Wellness</h1>
-                        <p class="small muted" style="margin: 2px 0 0; font-size: 11px; white-space: nowrap;">Premium Ayurvedic Care</p>
+        <header style="background: linear-gradient(135deg, rgba(45,80,22,0.02) 0%, rgba(90,138,58,0.02) 100%); border-bottom: 2px solid rgba(212,175,55,0.15); padding: 1rem 0;">
+            <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
+                <a class="brand" href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; flex: 0 0 auto;">
+                    <div class="brand-logo" style="width: 52px; height: 52px;">BNK</div>
+                    <div>
+                        <h1 style="font-size: 20px; margin: 0; color: var(--primary-green);">BNK Wellness</h1>
+                        <p class="small muted" style="margin: 2px 0 0;">Premium Ayurvedic Care</p>
                     </div>
                 </a>
 
-                <nav style="flex: 1; display: flex; justify-content: center; min-width: 0;">
-                    <ul id="navlinks" style="list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; align-items: center; flex-wrap: wrap;">
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('home')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block; font-size: 14px; white-space: nowrap;">Home</a></li>
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('about')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block; font-size: 14px; white-space: nowrap;">About</a></li>
-                        <li><a href="javascript:void(0)" onclick="switchPage('shop')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block; font-size: 14px; white-space: nowrap;">Shop</a></li>
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('testimonials')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block; font-size: 14px; white-space: nowrap;">Reviews</a></li>
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('contact')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block; font-size: 14px; white-space: nowrap;">Contact</a></li>
+                <nav style="flex: 1; display: flex; justify-content: center;">
+                    <ul id="navlinks" style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; align-items: center;">
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('home')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block;">Home</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('about')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block;">About</a></li>
+                        <li><a href="javascript:void(0)" onclick="switchPage('shop')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block;">Shop</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('testimonials')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block;">Reviews</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('contact')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block;">Contact</a></li>
                     </ul>
                 </nav>
 
-                <button class="hamb" id="hambBtn" aria-label="Open menu" style="display: none; background: transparent; border: none; width: 44px; height: 44px; cursor: pointer; padding: 0; flex-shrink: 0;">
+                <button class="hamb" id="hambBtn" aria-label="Open menu" style="display: none;">
                     <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="22" height="2" rx="1" fill="#0f172a"/>
                         <rect y="6" width="22" height="2" rx="1" fill="#0f172a"/>
@@ -2977,17 +2065,17 @@
                     </svg>
                 </button>
 
-                <a class="cta-btn" href="javascript:void(0)" onclick="switchPage('shop')" style="background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: white; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: 700; box-shadow: 0 10px 30px rgba(43,122,11,0.12); white-space: nowrap; flex: 0 0 auto; font-size: 13px; display: inline-flex; align-items: center; justify-content: center;">Shop Now</a>
+                <a class="cta-btn" href="javascript:void(0)" onclick="switchPage('shop')" style="background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: white; padding: 12px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; box-shadow: 0 10px 30px rgba(43,122,11,0.12); white-space: nowrap; flex: 0 0 auto;">Shop Now</a>
             </div>
 
-            <div id="mobileNav" style="display: none; padding: 12px 0; border-top: 1px solid rgba(15,23,42,0.03); background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));">
+            <div id="mobileNav" style="display: none; padding: 12px; border-top: 1px solid rgba(15,23,42,0.03); background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));">
                 <div class="container">
                     <ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px">
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('home')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 10px 12px; border-radius: 6px; transition: all 0.3s; display: block; font-size: 14px;">Home</a></li>
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('about')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 10px 12px; border-radius: 6px; transition: all 0.3s; display: block; font-size: 14px;">About</a></li>
-                        <li><a href="javascript:void(0)" onclick="switchPage('shop')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 10px 12px; border-radius: 6px; transition: all 0.3s; display: block; font-size: 14px;">Shop</a></li>
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('testimonials')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 10px 12px; border-radius: 6px; transition: all 0.3s; display: block; font-size: 14px;">Reviews</a></li>
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('contact')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 10px 12px; border-radius: 6px; transition: all 0.3s; display: block; font-size: 14px;">Contact</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('home')">Home</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('about')">About</a></li>
+                        <li><a href="javascript:void(0)" onclick="switchPage('shop')">Shop</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('testimonials')">Reviews</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('contact')">Contact</a></li>
                     </ul>
                 </div>
             </div>
