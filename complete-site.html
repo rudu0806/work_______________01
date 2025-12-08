@@ -121,6 +121,18 @@
             margin: 0 auto;
             padding: 0 20px;
         }
+
+        .header-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
 /* HEADER STYLES - ULTRA PREMIUM DESIGN */
         @keyframes headerFloat {
             0%, 100% { transform: translateY(0); }
@@ -1431,6 +1443,60 @@
                 display: none;
             }
 
+            /* HEADER CONTAINER CENTERING */
+            .header-container {
+                padding: 0 16px;
+                gap: 1rem;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .brand {
+                flex: 1 1 100%;
+                justify-content: center;
+                margin-bottom: 0.5rem;
+            }
+
+            nav {
+                flex: 1 1 100%;
+                justify-content: center;
+            }
+
+            /* HEADER CONTAINER MOBILE */
+            .header-container {
+                padding: 0 12px;
+                gap: 0.75rem;
+                flex-wrap: nowrap;
+            }
+
+            .brand {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                flex: 0 1 auto;
+                min-width: 0;
+            }
+
+            .brand h1 {
+                font-size: 15px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .brand p {
+                font-size: 9px;
+                display: none;
+            }
+
+            nav {
+                display: none !important;
+            }
+
+            .cta-btn {
+                display: none !important;
+            }
+
             /* HERO SECTION */
             .hero {
                 grid-template-columns: 1fr;
@@ -1846,6 +1912,54 @@
                 border-bottom-color: var(--primary-green);
                 color: var(--primary-green);
                 font-weight: 700;
+            }
+
+            /* HEADER CONTAINER CENTERING - 480px */
+            .header-container {
+                padding: 0 10px;
+                gap: 0.5rem;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+
+            .brand {
+                flex: 1;
+                gap: 8px;
+                min-width: 0;
+            }
+
+            .brand-logo {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+                flex-shrink: 0;
+            }
+
+            .brand h1 {
+                font-size: 13px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .brand p {
+                display: none;
+            }
+
+            .hamb {
+                width: 40px;
+                height: 40px;
+                flex-shrink: 0;
+            }
+
+            .cta-btn {
+                padding: 8px 12px;
+                font-size: 12px;
+                display: flex !important;
+            }
+
+            nav {
+                display: none !important;
             }
 
             /* HERO */
@@ -2279,6 +2393,27 @@
                 letter-spacing: 0;
             }
 
+            /* HEADER CONTAINER CENTERING - 360px */
+            .header-container {
+                padding: 0 10px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0.6rem;
+                text-align: center;
+            }
+
+            .brand {
+                flex: 1 1 100%;
+                justify-content: center;
+                min-width: 0;
+            }
+
+            .brand h1 {
+                font-size: 12px;
+                white-space: normal;
+            }
+
             nav {
                 font-size: 13px !important;
             }
@@ -2433,6 +2568,24 @@
 
         /* LANDSCAPE MODE - Devices in landscape orientation */
         @media (max-height: 500px) and (orientation: landscape) {
+            /* HEADER CONTAINER CENTERING - LANDSCAPE */
+            .header-container {
+                padding: 0 12px;
+                gap: 1rem;
+                flex-wrap: nowrap;
+            }
+
+            .brand {
+                flex: 0 1 auto;
+                justify-content: flex-start;
+                gap: 10px;
+            }
+
+            nav {
+                flex: 1;
+                justify-content: center;
+            }
+
             .hero {
                 padding: 10px 0;
                 gap: 10px;
@@ -2694,404 +2847,33 @@
                 margin: 0;
             }
         }
-
-        /* COMPREHENSIVE MOBILE RESPONSIVE - ALL PAGES */
-        
-        /* Touch Device Optimization */
-        @media (hover: none) and (pointer: coarse) {
-            button, .btn, a, input, select, textarea {
-                min-height: 44px;
-                min-width: 44px;
-            }
-
-            button {
-                padding: 12px 16px;
-            }
-
-            .card, .test, .feature {
-                cursor: pointer;
-            }
-        }
-
-        /* Mobile Text Size Optimization */
-        @media (max-width: 767px) {
-            html {
-                font-size: 14px;
-            }
-
-            body {
-                font-size: 14px;
-                padding-top: 50px;
-            }
-
-            h1 {
-                font-size: 22px;
-                line-height: 1.2;
-            }
-
-            h2 {
-                font-size: 18px;
-                line-height: 1.25;
-            }
-
-            h3 {
-                font-size: 16px;
-                line-height: 1.3;
-            }
-
-            h4 {
-                font-size: 14px;
-            }
-
-            p {
-                font-size: 14px;
-                line-height: 1.6;
-            }
-
-            section {
-                padding: 1.5rem 0;
-            }
-
-            .container {
-                margin: 0 auto;
-                width: 100%;
-            }
-        }
-
-        /* SAFE AREA INSETS - Notched Devices */
-        @supports (padding: max(0px)) {
-            body {
-                padding-left: max(0px, env(safe-area-inset-left));
-                padding-right: max(0px, env(safe-area-inset-right));
-            }
-
-            .container {
-                padding-left: max(16px, env(safe-area-inset-left));
-                padding-right: max(16px, env(safe-area-inset-right));
-            }
-
-            .floating {
-                right: max(10px, env(safe-area-inset-right));
-                bottom: max(14px, env(safe-area-inset-bottom));
-            }
-        }
-
-        /* PREVENT INPUT ZOOM ON MOBILE */
-        @media (max-width: 1024px) {
-            input,
-            textarea,
-            select,
-            button {
-                font-size: 16px !important;
-            }
-        }
-
-        /* FLEXIBLE SPACING FOR MOBILE */
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 12px;
-            }
-
-            main.container {
-                padding: 16px 12px;
-            }
-
-            section {
-                margin: 0;
-                padding: 1rem 0;
-            }
-
-            /* Better spacing between sections */
-            #about {
-                margin-top: 1rem;
-            }
-
-            .hero {
-                margin-bottom: 1.5rem;
-            }
-
-            /* Form improvements */
-            .form-group {
-                margin-bottom: 1rem;
-            }
-
-            .form-group label {
-                display: block;
-                margin-bottom: 0.5rem;
-                font-weight: 600;
-            }
-
-            .form-group input,
-            .form-group textarea,
-            .form-group select {
-                width: 100%;
-                padding: 12px;
-                font-size: 16px;
-                border: 1px solid var(--border-light);
-                border-radius: 8px;
-            }
-
-            /* Button improvements */
-            .btn {
-                width: 100%;
-                padding: 12px 16px;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .btn-primary, .btn-secondary {
-                width: 100%;
-                margin-bottom: 0.5rem;
-            }
-
-            /* Navigation spacing */
-            nav ul {
-                gap: 0.5rem !important;
-            }
-
-            nav li {
-                flex: 1;
-                min-width: 80px;
-            }
-
-            nav a {
-                padding: 8px 4px !important;
-                font-size: 12px !important;
-            }
-        }
-
-        /* MENU/NAVIGATION - Mobile Hamburger */
-        @media (max-width: 768px) {
-            #mobileNav {
-                display: block !important;
-            }
-
-            #mobileNav ul li a {
-                padding: 12px 16px !important;
-                font-size: 14px !important;
-                display: block;
-                color: var(--text-dark);
-                text-decoration: none;
-                border-radius: 6px;
-                transition: all 0.3s ease;
-            }
-
-            #mobileNav ul li a:hover {
-                background: rgba(45, 80, 22, 0.1);
-                color: var(--primary-green);
-            }
-
-            #mobileNav ul li {
-                border: none !important;
-                margin: 0;
-            }
-        }
-
-        /* GRID ADJUSTMENTS FOR MOBILE */
-        @media (max-width: 768px) {
-            .products-grid,
-            .testimonials,
-            .features {
-                grid-template-columns: 1fr;
-            }
-
-            .card {
-                padding: 12px;
-            }
-
-            .card img {
-                height: 150px;
-            }
-
-            .test, .feature {
-                padding: 14px;
-                margin-bottom: 12px;
-            }
-        }
-
-        /* HERO SECTION - Mobile */
-        @media (max-width: 768px) {
-            .hero {
-                min-height: auto;
-                padding: 1.5rem 0;
-                gap: 1rem;
-            }
-
-            .hero-left h2 {
-                font-size: 26px;
-                line-height: 1.15;
-            }
-
-            .hero-right {
-                max-width: 100%;
-            }
-
-            .hero-right img {
-                height: 120px;
-            }
-        }
-
-        /* CHECKOUT FORM - Mobile */
-        @media (max-width: 768px) {
-            .checkout-container {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .checkout-section {
-                padding: 1.5rem 1rem;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .payment-methods {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .order-summary {
-                border-top: 2px solid var(--border-light);
-                padding-top: 1.5rem;
-            }
-        }
-
-        /* FOOTER - Mobile */
-        @media (max-width: 768px) {
-            footer {
-                padding: 20px 12px;
-                font-size: 12px;
-            }
-
-            footer > div {
-                flex-direction: column;
-                gap: 12px;
-                align-items: flex-start;
-            }
-        }
-
-        /* MODAL - Mobile */
-        @media (max-width: 480px) {
-            .modal-card {
-                width: 95vw;
-                max-width: 100%;
-                padding: 16px;
-                border-radius: 12px;
-            }
-
-            #closeModal {
-                float: right;
-                font-size: 24px;
-            }
-        }
-
-        /* FLOATING BUTTON - Mobile */
-        @media (max-width: 768px) {
-            .floating {
-                padding: 10px 12px;
-                font-size: 12px;
-                right: 12px;
-                bottom: 70px;
-                z-index: 99;
-            }
-        }
-
-        /* RESPONSIVE IMAGES */
-        @media (max-width: 768px) {
-            img {
-                max-width: 100%;
-                height: auto;
-                display: block;
-            }
-
-            video {
-                max-width: 100%;
-                height: auto;
-            }
-        }
-
-        /* TABLETS - 769px to 1024px */
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .container {
-                padding: 0 20px;
-            }
-
-            .hero {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 16px;
-            }
-
-            .testimonials {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .features {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* PREVENT LAYOUT SHIFT */
-        @media (max-width: 480px) {
-            * {
-                max-width: 100%;
-            }
-
-            body {
-                overflow-x: hidden;
-            }
-
-            .container {
-                overflow-x: hidden;
-            }
-        }
-
-        /* SMOOTH TRANSITIONS ON MOBILE */
-        @media (max-width: 768px) {
-            button, a, input, select, textarea {
-                transition: all 0.3s ease;
-            }
-
-            button:active, a:active {
-                opacity: 0.8;
-                transform: scale(0.98);
-            }
-        }
     </style>
 </head>
 <body>
    
     <!-- PAGE 1: HOME -->
     <div id="home" class="page-section active">
-        <header style="background: linear-gradient(135deg, rgba(45,80,22,0.02) 0%, rgba(90,138,58,0.02) 100%); border-bottom: 2px solid rgba(212,175,55,0.15); padding: 1rem 0;">
-            <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
-                <a class="brand" href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; flex: 0 0 auto;">
-                    <div class="brand-logo" style="width: 52px; height: 52px;">BNK</div>
-                    <div>
-                        <h1 style="font-size: 20px; margin: 0; color: var(--primary-green);">BNK Wellness</h1>
-                        <p class="small muted" style="margin: 2px 0 0;">Premium Ayurvedic Care</p>
+        <header style="background: linear-gradient(135deg, rgba(45,80,22,0.02) 0%, rgba(90,138,58,0.02) 100%); border-bottom: 2px solid rgba(212,175,55,0.15); padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000;">
+            <div class="container header-container" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: nowrap; width: 100%;">
+                <a class="brand" href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; flex: 0 0 auto; min-width: 0; white-space: nowrap;">
+                    <div class="brand-logo" style="width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">BNK</div>
+                    <div style="min-width: 0; display: flex; flex-direction: column; justify-content: center;">
+                        <h1 style="font-size: 18px; margin: 0; color: var(--primary-green); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.1;">BNK Wellness</h1>
+                        <p class="small muted" style="margin: 2px 0 0; font-size: 11px; white-space: nowrap;">Premium Ayurvedic Care</p>
                     </div>
                 </a>
 
-                <nav style="flex: 1; display: flex; justify-content: center;">
-                    <ul id="navlinks" style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; align-items: center;">
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('home')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block;">Home</a></li>
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('about')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block;">About</a></li>
-                        <li><a href="javascript:void(0)" onclick="switchPage('shop')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block;">Shop</a></li>
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('testimonials')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block;">Reviews</a></li>
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('contact')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block;">Contact</a></li>
+                <nav style="flex: 1; display: flex; justify-content: center; min-width: 0;">
+                    <ul id="navlinks" style="list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; align-items: center; flex-wrap: wrap;">
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('home')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block; font-size: 14px; white-space: nowrap;">Home</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('about')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block; font-size: 14px; white-space: nowrap;">About</a></li>
+                        <li><a href="javascript:void(0)" onclick="switchPage('shop')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block; font-size: 14px; white-space: nowrap;">Shop</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('testimonials')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block; font-size: 14px; white-space: nowrap;">Reviews</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('contact')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block; font-size: 14px; white-space: nowrap;">Contact</a></li>
                     </ul>
                 </nav>
 
-                <button class="hamb" id="hambBtn" aria-label="Open menu" style="display: none;">
+                <button class="hamb" id="hambBtn" aria-label="Open menu" style="display: none; background: transparent; border: none; width: 44px; height: 44px; cursor: pointer; padding: 0; flex-shrink: 0;">
                     <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="22" height="2" rx="1" fill="#0f172a"/>
                         <rect y="6" width="22" height="2" rx="1" fill="#0f172a"/>
@@ -3099,17 +2881,17 @@
                     </svg>
                 </button>
 
-                <a class="cta-btn" href="javascript:void(0)" onclick="switchPage('shop')" style="background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: white; padding: 12px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; box-shadow: 0 10px 30px rgba(43,122,11,0.12); white-space: nowrap; flex: 0 0 auto;">Shop Now</a>
+                <a class="cta-btn" href="javascript:void(0)" onclick="switchPage('shop')" style="background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: white; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: 700; box-shadow: 0 10px 30px rgba(43,122,11,0.12); white-space: nowrap; flex: 0 0 auto; font-size: 13px; display: inline-flex; align-items: center; justify-content: center;">Shop Now</a>
             </div>
 
-            <div id="mobileNav" style="display: none; padding: 12px; border-top: 1px solid rgba(15,23,42,0.03); background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));">
+            <div id="mobileNav" style="display: none; padding: 12px 0; border-top: 1px solid rgba(15,23,42,0.03); background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));">
                 <div class="container">
                     <ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px">
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('home')">Home</a></li>
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('about')">About</a></li>
-                        <li><a href="javascript:void(0)" onclick="switchPage('shop')">Shop</a></li>
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('testimonials')">Reviews</a></li>
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('contact')">Contact</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('home')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 10px 12px; border-radius: 6px; transition: all 0.3s; display: block; font-size: 14px;">Home</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('about')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 10px 12px; border-radius: 6px; transition: all 0.3s; display: block; font-size: 14px;">About</a></li>
+                        <li><a href="javascript:void(0)" onclick="switchPage('shop')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 10px 12px; border-radius: 6px; transition: all 0.3s; display: block; font-size: 14px;">Shop</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('testimonials')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 10px 12px; border-radius: 6px; transition: all 0.3s; display: block; font-size: 14px;">Reviews</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('contact')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 10px 12px; border-radius: 6px; transition: all 0.3s; display: block; font-size: 14px;">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -3257,6 +3039,25 @@
 
     <!-- PAGE 2: SHOP -->
     <div id="shop" class="page-section">
+        <header style="background: linear-gradient(135deg, rgba(45,80,22,0.02) 0%, rgba(90,138,58,0.02) 100%); border-bottom: 2px solid rgba(212,175,55,0.15); padding: 1rem 0;">
+            <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
+                <a class="brand" href="#" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; flex: 0 0 auto;">
+                    <div class="brand-logo" style="width: 52px; height: 52px;">BNK</div>
+                    <div>
+                        <h1 style="font-size: 20px; margin: 0; color: var(--primary-green);">BNK Wellness</h1>
+                        <p class="small muted" style="margin: 2px 0 0;">Shop Products</p>
+                    </div>
+                </a>
+                <nav style="flex: 1; display: flex; justify-content: center;">
+                    <ul id="navlinks-shop" style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; align-items: center;">
+                        <li><a href="javascript:void(0)" onclick="switchPage('home')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block;">Home</a></li>
+                        <li><a href="javascript:void(0)" onclick="switchPage('checkout')" style="color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; display: inline-block;">Checkout</a></li>
+                    </ul>
+                </nav>
+                <a href="javascript:void(0)" onclick="switchPage('checkout')" style="background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: white; padding: 12px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; box-shadow: 0 10px 30px rgba(43,122,11,0.12); white-space: nowrap; flex: 0 0 auto;">Cart</a>
+            </div>
+        </header>
+
         <main class="container" style="padding: 40px 0;">
             <h2 style="margin-bottom: 30px; font-size: 2rem; font-family: 'Cormorant Garamond', serif; color: var(--primary-green);">Our Products</h2>
             
